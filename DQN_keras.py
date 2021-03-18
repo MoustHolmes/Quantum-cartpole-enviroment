@@ -2,8 +2,12 @@ from keras.layers import Dense, Activation
 from keras.models import Sequential, load_model, model_from_json
 from keras.optimizers import Adam
 
+
 import numpy as np
-    
+
+from ReplayBuffer import ReplayBuffer
+from Build_DQN_net_keras import build_dqn
+
 class DQN_Agent(object):
     def __init__(self, alpha, gamma, n_actions, epsilon, batch_size, input_dims,
                  activation='relu',
