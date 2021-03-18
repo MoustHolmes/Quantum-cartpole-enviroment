@@ -4,6 +4,9 @@ from keras.optimizers import Adam
 
 import numpy as np
 
+from ReplayBuffer import ReplayBuffer
+from Build_DQN_net_keras import build_dqn
+
 class DDQN_Agent(object):
     def __init__(self, alpha, gamma, n_actions, epsilon, batch_size,
                  input_dims, epsilon_dec=0.996,  epsilon_end=0.01,
